@@ -6,7 +6,7 @@ const PORT = 3000;
 app.use(express.json());
 
 function getCategorias() {
-  const data = fs.readFileSync("./data/categorias.json", "utf-8");
+  const data = fs.readFileSync("./categorias.json", "utf-8");
   return JSON.parse(data);
 }
 
