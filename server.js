@@ -6,7 +6,7 @@ const PORT = 3000;
 app.use(express.json());
 
 function getUsuarios() {
-  const data = fs.readFileSync("./api.usuario/data/usuarios.json", "utf-8");
+  const data = fs.readFileSync("./data/usuarios.json", "utf-8");
   return JSON.parse(data);
 }
 
