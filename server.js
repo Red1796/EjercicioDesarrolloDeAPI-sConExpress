@@ -5,6 +5,14 @@ const PORT = 3000;
 
 app.use(express.json());
 
+function getUsuarios() {
+  const data = fs.readFileSync("./data/usuarios.json", "utf-8");
+  return JSON.parse(data);
+}
+
+app.get("/api/usuarios", (req, res) => {
+  const usuarios = getUsuarios();
+  res.json(usuarios);
 function getCategorias() {
   const data = fs.readFileSync("./data/categorias.json", "utf-8");
   return JSON.parse(data);
